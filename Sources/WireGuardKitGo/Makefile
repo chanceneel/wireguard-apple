@@ -3,7 +3,7 @@
 # Copyright (C) 2018-2019 Jason A. Donenfeld <Jason@zx2c4.com>. All Rights Reserved.
 
 # These are generally passed to us by xcode, but we set working defaults for standalone compilation too.
-ARCHS ?= x86_64 arm64
+ARCHS ?= $(if $(filter iphonesimulator,$(PLATFORM_NAME)),arm64,x86_64 arm64)
 PLATFORM_NAME ?= macosx
 SDKROOT ?= $(shell xcrun --sdk $(PLATFORM_NAME) --show-sdk-path)
 CONFIGURATION_BUILD_DIR ?= $(CURDIR)/out
@@ -20,6 +20,7 @@ GOARCH_arm64 := arm64
 GOARCH_x86_64 := amd64
 GOOS_macosx := darwin
 GOOS_iphoneos := ios
+GOOS_iphonesimulator := ios
 
 build: $(DESTDIR)/libwg-go.a
 version-header: $(DESTDIR)/wireguard-go-version.h

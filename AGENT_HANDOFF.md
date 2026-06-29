@@ -2,19 +2,21 @@
 
 Last updated: 2026-06-15
 
-Local project: `/Users/chanceneel/Projects/wireguard-apple`
+Local project: `/Users/chanceneel/Projects/wireguard-apple-fork`
 Current branch snapshot: `cp-tools-version-5-5`
 Dirty snapshot before this file: 0 changed/untracked paths
 
 GitHub remotes:
 
-- `origin`: `https://github.com/chanceneel/wireguard-apple`
+- `origin`: `https://github.com/chanceneel/wireguard-apple.git`
+- `upstream`: `https://git.zx2c4.com/wireguard-apple.git`
 
 GitHub push readiness snapshot:
 
 - Antigravity MCP token check: GitHub API lookup for `chanceneel/wireguard-apple` redirects to `DeadStick-Digital/wireguard-apple`, where the token reports `push=true` and `admin=true`.
 - Shell auth check: global `gh` default token was invalid on 2026-06-15. Run `gh auth status` before push.
-- Remote hygiene note: consider updating the remote URL to the current GitHub owner before future push work.
+- `upstream` is not GitHub.com and should be treated as upstream source, not a push target unless intentionally maintaining a fork workflow.
+- Remote hygiene note: consider updating the GitHub origin URL to the current owner before future push work.
 
 ## Start Here
 
